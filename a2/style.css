@@ -1,1 +1,289 @@
-/* Insert your styles here */
+
+body {
+    animation: fadein 2s;
+    background-color: black;
+    font-style: italic;
+}
+
+.body h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+body header{
+    width: 100%;
+   
+    text-align: center;
+    font-size: 30px;
+    color:#ffc845;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+body header img{
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;   
+}
+
+body header h1{
+   
+    top:20px;
+    margin-left: 200px;
+}
+
+#section{
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+.top_nav {
+    width: 100%;
+    height: 100px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    z-index: 999;
+   
+}
+
+.top_nav a{
+   
+    background-color: transparent;
+    border: 3px solid #ffc845;; 
+    background-color: black;
+    border-radius: 30px;
+    color: #ffc845;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.top_nav a:visited{
+    color:#e56db1
+}
+
+.top_nav a:hover{
+    color:#41b6e6;
+    text-emphasis: bold;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    transform: scale(1.2);
+}
+
+
+#about{
+    width: 100%;
+
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+
+#about h1{
+    font-size: 40px;
+    color: #ffc845;
+    text-align: center;
+}
+
+   
+#seating{
+    background: rgb(204, 200, 200);
+    padding: 20px;
+    text-align: center;
+}
+
+
+#now_showing{
+    background: black;
+    text-align: center;
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:#ffc845;
+    justify-content: space-between;
+    
+    
+}
+
+.now_showing  div {
+    width: 50%;
+    display: inline-block;  
+  }
+
+
+.movie_info{
+   
+    background-color: transparent;
+    width: 550px;
+    height:475px;
+    margin-bottom: 90px;
+    padding: 30px;
+    perspective: 1000px;
+    
+  }
+
+   
+.movie_info img{
+    max-width: 300px;
+    max-height: 400px;
+    margin: 15px;
+    float: left;
+    vertical-align: middle;
+  }
+
+.movie_info h3 {
+    font-size:30px;
+  }
+
+
+.movie_info_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.movie_info:hover .movie_info_inner {
+  transform: rotateY(180deg);
+}
+
+.movie_info_front, .movie_info_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+
+.movie_info_front{
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    font-size: 20px;
+    padding:5px;
+    border: solid 2px;
+    border-color: #ffc845;
+    text-align: left;
+    border-radius: 12px;
+ 
+  
+  }
+  
+.movie_info_back{
+    /*border box prevents back card from changing size due to different padding*/
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    font-size: 20px;
+    padding:5px;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: #ffc845;
+    display: table;
+    text-align: center; 
+    transform: rotateY(180deg); 
+  }
+
+  /* box-shadow provides "glow" effect around edges */
+.movie_info_back:hover{
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+}
+  
+.movie_info_back img{
+    max-width: 250px;
+    max-height: 250px;
+     
+}
+.movie_info_back p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie_info_back h3{
+    margin-top: -5px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .movie_info_back h4{
+    text-align: right;
+    font-size: 28px;
+  }
+
+.movie_info_back ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    float:right;
+    display: table-cell;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+    
+.movie_info_back li{
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+button[type="submit"]{ 
+    display: table-cell;
+    margin-right: 10px;
+    justify-content: center;
+    vertical-align: bottom;
+    background-color: black; 
+    border:solid 3px;
+    border-color: #ffc845;
+    border-radius: 12px;
+    color: #ffc845;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* box-shadow provides "glow" effect around edges , other css makes button look slightly bigger and bold text */
+button[type="submit"]:hover{
+    cursor: pointer;
+    color: #fcd780;
+    font-size: 18px;
+    text-emphasis: bold;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+

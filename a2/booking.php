@@ -11,15 +11,44 @@
     <script src='../wireframe.js'></script>
   </head>
 
+  <?php if(!isset($_GET['movie_Code'])){
+    Header("Location: ./index.php?error=".'Movie not found');
+    die;
+} ?>
+
+
   <body>
 
     <header>
       <div>Put company logo and name here</div>
     </header>
-
+    <br><br><br.<br><br><br>
     <nav>
       <div>Put website navigation links here</div>
     </nav>
+
+    <?php 
+    echo "hello";
+    $movie_code = $_GET['movie_Code'];
+    ?>
+
+
+
+
+
+    <h3><?php echo $movie_name; ?></h3>
+
+
+      GET Contains:
+  <?php print_r($_GET) ?>
+  POST Contains:
+  <?php print_r($_POST) ?>
+  SESSION Contains:
+  <?php print_r($_SESSION) ?>
+
+
+
+
 
     <main>
       <article id='Website Under Construction'>
@@ -28,6 +57,7 @@
       </article>
     </main>
     <footer>
+      <br><br><br><br><br><br><br>
       <div>&copy;<script>
         document.write(new Date().getFullYear());
       </script> Put your name(s), student number(s) and group name here. Last modified <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
@@ -38,12 +68,7 @@
       <hr>
       <h3>Debug Area</h3>
       <pre>
-GET Contains:
-<?php print_r($_GET) ?>
-POST Contains:
-<?php print_r($_POST) ?>
-SESSION Contains:
-<?php print_r($_SESSION) ?>
+
       </pre>
     </aside>
 
