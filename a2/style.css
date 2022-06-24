@@ -1,15 +1,5 @@
 
-body {
-    animation: fadein 2s;
-    background-color: black;
-    font-style: italic;
-}
-
-.body h4{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-}
-
+/* this is a basic fade-in effect, this is mostly used because my monitor is really bad and i kind of need it to get opacity to 1 properly */
 @keyframes fadein{
     0%{
         opacity: 0;
@@ -22,35 +12,6 @@ body {
     }
 }
 
-
-body header{
-    width: 100%;
-   
-    text-align: center;
-    font-size: 30px;
-    color:#ffc845;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
-
-body header img{
-    
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;   
-}
-
-body header h1{
-   
-    top:20px;
-    margin-left: 200px;
-}
-
-#section{
-    display: -webkit-flex;
-    display: flex;
-}
 
 
 .top_nav {
@@ -94,27 +55,139 @@ body header h1{
     transform: scale(1.2);
 }
 
+body {
+    animation: fadein 2s;
+    background-color: black;
+    font-style: italic;
+    color:#ffc845;
+    
+}
+
+body h1{
+    text-align: center;
+    font-size: 50px;
+    
+}
+
+
+body header{
+    width: 100%;
+   
+    text-align: center;
+    font-size: 30px;
+    color:#ffc845;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+body header img{
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;   
+}
+
+body header h1{
+   
+    top:20px;
+    margin-left: 200px;
+}
+
+body hr{
+    width: 90%;
+    background-color: #ffc845;
+    border-color: #ffc845;
+    border-radius: 8px;
+    height: 3px;
+    
+}
+
+#section{
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+
 
 #about{
-    width: 100%;
-
+   
+    font-size: 22px;
     background: black;
     padding: 20px;
     text-align: center;
+    display: inline-block;
+    left: 0px;
+    margin: 0 10%;
+    width: 80%;
+    height : 175px;
 }
 
-#about h1{
+.about h1{
     font-size: 40px;
-    color: #ffc845;
     text-align: center;
 }
 
    
 #seating{
-    background: rgb(204, 200, 200);
+
+    background: black;
     padding: 20px;
     text-align: center;
+    color: #ffc845;
+    display: inline-block;
+    left: 0px;
+    margin: 0 10%;
+    width: 80%;
+  
 }
+#seating h1{
+    font-size: 40px;
+    text-align:center;
+}
+
+.seating table{
+    width: 80%;
+}
+
+.seating table, th, tr, td{
+
+   
+    text-align: center;
+    
+    border: 1px solid #ffc845;  
+    margin-left: auto;  
+    margin-right: auto;  
+    border-collapse: collapse;    
+    width: 550px;  
+    text-align: center;  
+    font-size: 25px;  
+    padding: 15px;
+    
+    
+}
+
+.seating .div{
+    width: 50%;
+    display: inline-block; 
+}
+
+.seating div.seating_options {
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+}
+.seating_options img {
+    width: 100px;
+    height: 100px;
+    background-color: grey;
+}
+.seating_options caption {
+    display: block;
+}
+
 
 
 #now_showing{

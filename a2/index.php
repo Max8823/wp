@@ -29,20 +29,82 @@
 
     
     <main>
-     
+    <h1>About us</h1>
         <section id="about">
 
-            <h1>About us</h1>
+            <p> Lunardo Cinemas is local theatre located inbetween Townsville and Cairns FNQ, oringinally opening its doors to customers in 1982 Lunardo Cinemas has over 40 years
+              Experience in the theatre industry. After a long renovating period and due to the covid pandemic Lunardo Cinemas is once again opening its doors to customers, with a 
+            grand reopening occuring on the 4th of August 2022 </p> 
 
         </section>
-
+        <hr>
         <h1>Seating</h1>
         <section id ="seating">
+        
+        <p> Lunardo Cinamas have upgraded the seating options for viewers and are now offering first class seating in addition to our standard seating option. </p> 
+            <h1>Pricing</h1>
+
+            <div class = seating_options>
+              <img src = "../media/Profern-Standard-Twin.png" alt='Standard seating'> 
+              <span class ="caption"> Standard seating </span>
+            </div>
+
+            <div class = seating_options>
+            <img src = "../media/Profern-Verona-Twin.png" alt='First Class'>
+              <span class ="caption"> First Class seating </span>
+            </div>
+          
+
+            <table>
+              <tr id='firstrow'>
+                <th>Seat Type</th>
+                <th>Seat Code</th>
+                <th>All day Monday and 12pm onwards on Weekdays</th>
+                <th>All other times</th>
+              </tr>
+              <tr>
+                <td>Standard Adult</td>
+                <td>STA</td>
+                <td>$ 15.00</td>
+                <td>$ 20.00</td>
+              </tr>
+              <tr>
+                <td>Standard Concession</td>
+                <td>STP</td>
+                <td>$ 13.50</td>
+                <td>$ 18.00</td>
+              </tr>
+              <tr>
+                <td>Standard Child</td>
+                <td>STC</td>
+                <td>$ 12.00</td>
+                <td>$ 16.50</td>
+              </tr>
+              <tr>
+                <td>First Class Adult</td>
+                <td>FCA</td>
+                <td>$ 24.00</td>
+                <td>$ 30.00</td>
+              </tr>
+              <tr>
+                <td>First Class Concession</td>
+                <td>FCP</td>
+                <td>$ 22.50</td>
+                <td>$ 27.00</td>
+              </tr>
+              <tr>
+                <td>First Class Child</td>
+                <td>FCC</td>
+                <td>$ 21.00</td>
+                <td>$ 24.00</td>
+              </tr>
+            </table>
         </section>
 
-
+        <hr>
         <h1>Now Showing</h1>
         <section id="now_showing">
+        
           <div class='movie_info'>
             <div class ='movie_info_inner'>
 
@@ -67,17 +129,13 @@
                   <li>Sat - 6:00 PM</li>
                   <li>Sun - 6:00 PM</li>
                 </ul>
+                <!--these breaks are needed to push the "book now button to the bottom of the card-->
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
                   <input type="hidden" name="movie_Code" value="ACT">
                   <button name="bookNow" type="submit">Book Now</button>
-                </form>
-                
-                
-                 
-               
-                  
+                </form>   
               </div>
             </div>
           </div>
@@ -105,6 +163,7 @@
                 <li>Sat - 9:00 PM</li>
                 <li>Sun - 9:00 PM</li>
              </ul>
+             <!--these breaks are needed to push the "book now button to the bottom of the card-->
              <br><br><br><br><br><br>
                 <form action ="booking.php" method="get">
                   <input type="hidden" name="movie_Code" value="AHF">
@@ -140,6 +199,7 @@
                   <li>Sat - 12:00 PM</li>
                   <li>Sun - 12:00 PM</li>
                 </ul>
+                <!--these breaks are needed to push the "book now button to the bottom of the card-->
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
@@ -172,7 +232,7 @@
                   <li>Fri - 12:00 PM</li>
                   <li>Sat - 3:00 PM</li>
                   <li>Sun - 3:00 PM</li>
-                </ul>
+                </ul><!--these breaks are needed to push the "book now button to the bottom of the card-->
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
@@ -185,6 +245,8 @@
           </div>
 <!-- end of now showing section -->    
         </section>
+        <hr>
+       
 
 
       
