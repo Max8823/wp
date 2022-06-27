@@ -9,7 +9,7 @@
     <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
     <link id='stylecss' type="text/css" rel="stylesheet" href="style.css?t=<?= filemtime("style.css"); ?>">
     <script src='../wireframe.js'></script>
-    <script src =scripts.js></script>
+    
   </head>
 
   <body>
@@ -45,56 +45,50 @@
             <h1>Pricing</h1>
 
             <div class = seating_options>
-              <img src = "../media/Profern-Standard-Twin.png" alt='Standard seating'> 
+              <img src = "../../media/Profern-Standard-Twin.png" alt='Standard seating'> 
               <span class ="caption"> Standard seating </span>
             </div>
 
             <div class = seating_options>
-            <img src = "../media/Profern-Verona-Twin.png" alt='First Class'>
+            <img src = "../../media/Profern-Verona-Twin.png" alt='First Class'>
               <span class ="caption"> First Class seating </span>
             </div>
+            <p> The pricing for first class and standard seating arranements can be seen below: prices are discounted all day Monday and from 12:PM onwards every other week day. </p> 
           
-
+          
             <table>
-              <tr id='firstrow'>
+              <tr>
                 <th>Seat Type</th>
-                <th>Seat Code</th>
                 <th>All day Monday and 12pm onwards on Weekdays</th>
                 <th>All other times</th>
               </tr>
               <tr>
                 <td>Standard Adult</td>
-                <td>STA</td>
                 <td>$ 15.00</td>
                 <td>$ 20.00</td>
               </tr>
               <tr>
                 <td>Standard Concession</td>
-                <td>STP</td>
                 <td>$ 13.50</td>
                 <td>$ 18.00</td>
               </tr>
               <tr>
                 <td>Standard Child</td>
-                <td>STC</td>
                 <td>$ 12.00</td>
                 <td>$ 16.50</td>
               </tr>
               <tr>
                 <td>First Class Adult</td>
-                <td>FCA</td>
                 <td>$ 24.00</td>
                 <td>$ 30.00</td>
               </tr>
               <tr>
                 <td>First Class Concession</td>
-                <td>FCP</td>
                 <td>$ 22.50</td>
                 <td>$ 27.00</td>
               </tr>
               <tr>
                 <td>First Class Child</td>
-                <td>FCC</td>
                 <td>$ 21.00</td>
                 <td>$ 24.00</td>
               </tr>
@@ -111,7 +105,7 @@
               <div class='movie_info_front'>
                 <img src='https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UY576_.jpg' alt='Top gun maverick'>
                 <h3>Top gun Maverick</h3>
-                <h4>Rating : PG</h4>
+                <h4>Rating : M</h4>
               </div>
 
               <div class = 'movie_info_back'>
@@ -146,7 +140,7 @@
             <div class='movie_info_front'>
               <img src='https://m.media-amazon.com/images/M/MV5BNzlkZjI3ZDctNTEzMy00MjUxLWI5YjQtYjg0ODNjNzdjZjg0XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_FMjpg_UX300_.jpg' alt='Lightyear'>
               <h3>Samrat Prithviraj</h3>
-              <h4>Rating : PG</h4>
+              <h4>Rating : M</h4>
             </div>
      
             <div class = 'movie_info_back'>
@@ -195,7 +189,7 @@
                   <li>Tue - 12:00 PM</li>
                   <li>Wed - 6:00 PM</li>
                   <li>Thu - 6:00 PM</li>
-                  <li>Fri - 18:00 PM</li>
+                  <li>Fri - 6:00 PM</li>
                   <li>Sat - 12:00 PM</li>
                   <li>Sun - 12:00 PM</li>
                 </ul>
@@ -203,7 +197,7 @@
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="ACT">
+                  <input type="hidden" name="movie_Code" value="FAM">
                   <button name="bookNow" type="submit">Book Now</button>
                 </form>
 
@@ -236,7 +230,7 @@
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="ACT">
+                  <input type="hidden" name="movie_Code" value="RMC">
                   <button name="bookNow" type="submit">Book Now</button>
                 </form>
 

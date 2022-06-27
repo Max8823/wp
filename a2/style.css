@@ -15,11 +15,11 @@
 
 
 .top_nav {
-    width: 100%;
+   
     height: 100px;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 30px;
     background-color: transparent;
     padding: 20px;
     text-align: center;
@@ -65,31 +65,33 @@ body {
 
 body h1{
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     
 }
+
+body p{
+    font-size: 22px;
+}
+
+
 
 
 body header{
-    width: 100%;
-   
+    
     text-align: center;
-    font-size: 30px;
     color:#ffc845;
-    align-items: center;
     justify-content: center;
     display: flex;
+    
 }
 
 body header img{
-    
     width: 150px;
     height: 150px;
     border-radius: 8px;   
 }
 
 body header h1{
-   
     top:20px;
     margin-left: 200px;
 }
@@ -100,6 +102,8 @@ body hr{
     border-color: #ffc845;
     border-radius: 8px;
     height: 3px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     
 }
 
@@ -112,8 +116,6 @@ body hr{
 
 
 #about{
-   
-    font-size: 22px;
     background: black;
     padding: 20px;
     text-align: center;
@@ -121,7 +123,7 @@ body hr{
     left: 0px;
     margin: 0 10%;
     width: 80%;
-    height : 175px;
+    min-height: 100%;
 }
 
 .about h1{
@@ -140,6 +142,7 @@ body hr{
     left: 0px;
     margin: 0 10%;
     width: 80%;
+    min-height: 100%;
   
 }
 #seating h1{
@@ -147,15 +150,17 @@ body hr{
     text-align:center;
 }
 
-.seating table{
-    width: 80%;
+th{
+    font-size: 30px;
+    text-align: center; 
+    border: 1px solid #ffc845;  
+    margin-left: auto;  
+    margin-right: auto;  
 }
 
-.seating table, th, tr, td{
+.seating table, tr, td{
 
-   
     text-align: center;
-    
     border: 1px solid #ffc845;  
     margin-left: auto;  
     margin-right: auto;  
@@ -164,8 +169,7 @@ body hr{
     text-align: center;  
     font-size: 25px;  
     padding: 15px;
-    
-    
+  
 }
 
 .seating .div{
@@ -173,19 +177,24 @@ body hr{
     display: inline-block; 
 }
 
-.seating div.seating_options {
+.seating_options{
     vertical-align: top;
     display: inline-block;
     text-align: center;
     width: 120px;
+    margin-bottom: 50px;
 }
 .seating_options img {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
     background-color: grey;
+    
+    margin-top: 50px;
 }
 .seating_options caption {
     display: block;
+    
 }
 
 
@@ -217,7 +226,7 @@ body hr{
     height:475px;
     margin-bottom: 90px;
     padding: 30px;
-    perspective: 1000px;
+    
     
   }
 
@@ -269,11 +278,10 @@ body hr{
     text-align: left;
     border-radius: 12px;
  
-  
   }
   
 .movie_info_back{
-    /*border box prevents back card from changing size due to different padding*/
+    
     width: inherit;
     height: inherit;
     background-color: black;
@@ -303,7 +311,6 @@ body hr{
 
 .movie_info_back h3{
     margin-top: -5px;
-    font-size: 30px;
     text-align: center;
   }
 
@@ -355,7 +362,74 @@ button[type="submit"]:hover{
 }
 
 
+.video_player{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
 
+.video_player div{
+    width: 30%;
+    margin-left: 5%; 
+   
+}
+
+.video_player h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: auto;
+
+}
+
+.booking_form_wrapper{
+    display: flex;
+    justify-content: center;
+    border: 2px, solid;
+    border-color: #ffc845;
+}
+
+.booking_form_wrapper div {
+    margin-left: 10%;
+    font-size: 24px;
+    padding: 5px;
+}
+
+
+.booking_form_wrapper input{
+    margin-bottom: 20px;
+   
+}
+
+.booking_form_time label{
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.radio_button{
+  cursor: pointer;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: #e56db1;
+  border: 3px solid;
+  border-color: #585858;
+  margin: 0;
+ 
+
+
+}
+
+
+.radio_button:checked{
+    background-color: #41b6e6;
+    transform: scale(1.2);
+    
+}
+
+@media only screen and (max-width: 600px) {
+    
+}
+    
 html{
     scroll-behavior: smooth;
 }
