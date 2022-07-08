@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>Assignment 2</title>
     
     <!-- Keep wireframe.css for debugging, add your css to style.css -->
@@ -17,8 +18,6 @@
     <header>
     <img src = "https://imgur.com/t6jo64l.png" alt= "Lunardo_logo" class="header_logo">
       <h1>Lunardo Cinemas<h1>
-      
-
     </header>
 
     <div class ='top_nav'>
@@ -46,12 +45,12 @@
 
             <div class = seating_options>
               <img src = "../../media/Profern-Standard-Twin.png" alt='Standard seating'> 
-              <span class ="caption"> Standard seating </span>
+              <figcaption>Standard seating</figcaption>
             </div>
 
             <div class = seating_options>
             <img src = "../../media/Profern-Verona-Twin.png" alt='First Class'>
-              <span class ="caption"> First Class seating </span>
+              <figcaption>First class seating</figcaption>
             </div>
             <p> The pricing for first class and standard seating arranements can be seen below: prices are discounted all day Monday and from 12:PM onwards every other week day. </p> 
           
@@ -127,7 +126,7 @@
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="ACT">
+                  <input type="hidden" name="movie" value="ACT">
                   <button name="bookNow" type="submit">Book Now</button>
                 </form>   
               </div>
@@ -160,7 +159,7 @@
              <!--these breaks are needed to push the "book now button to the bottom of the card-->
              <br><br><br><br><br><br>
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="AHF">
+                  <input type="hidden" name="movie" value="AHF">
                   <!--there needs to be in-line styling for this button for ti to be centered-->
                   <button name="bookNow" style ="margin-right:100px" type="submit">Book Now</button>
                 </form>
@@ -197,7 +196,7 @@
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="FAM">
+                  <input type="hidden" name="movie" value="FAM">
                   <button name="bookNow" type="submit">Book Now</button>
                 </form>
 
@@ -230,7 +229,7 @@
                 <br><br><br><br><br><br>
                 
                 <form action ="booking.php" method="get">
-                  <input type="hidden" name="movie_Code" value="RMC">
+                  <input type="hidden" name="movie" value="RMC">
                   <button name="bookNow" type="submit">Book Now</button>
                 </form>
 

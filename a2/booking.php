@@ -7,19 +7,20 @@ $movie_data = file_get_contents("movie_data.json");
 $movies = [];
 
 
+// storing the movies from the movie JSON into an array
 foreach (json_decode($movie_data) as $movie){
   $movies[] = new Movie((array)$movie);
 }
 // this prevents an incorrect movie code from being submitted in the post from the index.php page
-  if(!isset($_GET['movie_Code'])){
+  if(!isset($_GET['movie'])){
     Header("Location: ./index.php?error=".'Movie not found');
     die;
 } else{
 
 
-
+// finding the current movie based off the movie_code that was passed in the post, comparing to existing movie_codes in the movies.JSON file
   foreach($movies as $movie){
-    if($movie->get_movie_code() == $_GET['movie_Code']){
+    if($movie->get_movie_code() == $_GET['movie']){
       $current_movie =$movie;
     }
   }
@@ -66,36 +67,34 @@ foreach (json_decode($movie_data) as $movie){
     <div class ="video_player">
 
       <div class = "video_wrapper">
-        <iframe width="560" height="315" src=<?php echo $current_movie->get_movie_trailer()?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="750" height="615" src=<?php echo $current_movie->get_movie_trailer()?> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-
+      
       <div class = "synopsis">
         <h4> Movie Synopsis </h4>
-        <p><?php echo $current_movie->get_movie_details()?></p>
+        <p><br><br><?php echo $current_movie->get_movie_details()?></p>
       </div>
 
     </div>
 
-    <hr>
-    <h1> Enter your personal and booking details below: </h1>
-    <form action ="booking.php">
+      <hr>
+      <h1> Enter your personal and booking details below: </h1>
+      <form action ="booking.php">
     
-    <input type="hidden" name="movie_Code" value="ACT">
+      <input type="hidden" name="movie" value=<?php echo $current_movie->get_movie_code() ?>>
 
       <div class = "booking_form_wrapper">
         <div class = "booking_form_personal"> 
 
-          <label for ="first_name"> First name </label><br>
-          <input type="text" id="first_name" name="first_name" required placeholder="Maxwell"><br>
+          <label for ="user[Name]"> First name </label><br>
+          <input type="text" id="user[Name]" name="user[Name]" required placeholder="Maxwell"><br>
 
-          <label for = "last_name"> Last name </label><br>
-          <input type = "text" id="last_name" name = "last_name" required placeholder ="Trounce"> <br>
+          <label for="user[Email]">Email:</label><br>
+          <input type="text" id="user[Email]" name="user[Email]" required placeholder="myEmail@gmail.com"><br>
 
-          <label for="email">Email:</label><br>
-          <input type="text" id="email" name="email" required placeholder="myEmail@gmail.com"><br>
+          <label for="user[mobile_number]">Mobile Number:</label><br>
+          <input type="text" id="user[mobile-number]" name="user[mobile_number]" required placeholder="0421 123 123"><br>
 
-          <label for="mobile_number">Mobile Number:</label><br>
-          <input type="text" id="mobile-number" name="mobile_number" required placeholder="0421 123 123"><br>
         </div>
 
         <div class ="booking_form_time">
@@ -107,13 +106,18 @@ foreach (json_decode($movie_data) as $movie){
             $viewing_times = $current_movie->get_viewing_times();
 
             $showing_days = $current_movie ->get_viewing_days();
+            
             $i=0;
             while($i < count($showing_days)){
 
-              echo "<input type='radio' id='".$showing_days[$i]."' name='day' value='".$showing_days[$i]."' class='radio_button'>";
+              $dateTime = [
+                'day' => $showing_days[$i],
+                'time' => $viewing_times[$i]
+              ];
+             
+              echo "<input type='radio' id='".$showing_days[$i]."' name='day' value='".json_encode($dateTime, true)."' class='radio_button'>";
               echo "<label for='".$showing_days[$i]."'>".$showing_days[$i]," - ", $showing_times[$i]."</label><br>"; 
-              echo "<input type='hidden' id='time' name='time' value=".$showing_times[$i].">";
-
+           
               $i++;
             }?>
         </div> 
@@ -122,77 +126,66 @@ foreach (json_decode($movie_data) as $movie){
             <fieldset>
               <legend>Standard Seating</legend>
       
-                <label for ="qty-seats-STA"> Standard Adults:</label>
-                  <select name="qty-seats-STA"id="qty-seats-STA">
+                <label for ="seats[STA]"> Standard Adults:</label>
+                  <select name="seats[STA]" data-fullprice ="20.50" data-discprice ="15">
                   <option value ="">Please Select</option>
                     <?php make_seat_num(); ?>
-                    <input type='hidden' id='STA-price' name='STA-price' value='20.50'>
-                    <input type='hidden' id='STA-price-disc' name='STA-price-disc' value='15.00'>
                   </select> <br>
 
-                <label for="qty-seats-STP">Standard Concession:</label>
-                  <select name="qty-seats-STP" id="qty-seats-STP">
+                <label for="seats[STP]">Standard Concession:</label>
+                  <select name="seats[STP]" data-fullprice ="18" data-discprice ="13.5">
                   <option value ="">Please Select</option>
                     <?php make_seat_num(); ?>
-                    <input type='hidden' id='STP-price' name='STP-price' value='18.00'>
-                    <input type='hidden' id='STP-price-disc' name='STP-price-disc' value='13.50'>
                   </select> <br>
 
-                <label for ="qty-seats-STC">Standard Children: </label>
-                  <select name ="qty-seats-STC" id= "qtyseats-STC">
+                <label for ="seats[STC]">Standard Children: </label>
+                  <select name ="seats[STC]" data-fullprice ="16.5" data-discprice ="12">
                     <option value ="">Please Select</option>
                   <?php make_seat_num(); ?>
-                  <input type='hidden' id='STC-price' name='STC-price' value='16.50'>
-                  <input type='hidden' id='STC-price-disc' name='STC-price-disc' value='12.00'>
-
                 </select>
             </fieldset>
 
             <fieldset>
               <legend>First Class Seating</legend>
 
-                <label for="qty-seats-FCA">First Class Adults:</label>
-                  <select name ="qty-seats-FCA" id= "qty-seats-FCA">
+                <label for="seats[FCA]">First Class Adults:</label>
+                  <select name ="seats[FCA]" data-fullprice ="30" data-discprice ="24">
                     <option value ="">Please Select</option>
                     <?php make_seat_num(); ?>
-                    <input type='hidden' id='FCA-price' name='FCA-price' value='30.00'>
-                    <input type='hidden' id='FCA-price-disc' name='FCA-price-disc' value='24.00'>
                   </select><br>
 
-                <label for="qty-seats-FCP">First Class Concession: </label>
-                  <select name ="qty-seats-FCP" id= "qty-seats-FCP">
+                <label for="seats[FCP]">First Class Concession: </label>
+                  <select name ="seats[FCP]" data-fullprice ="27" data-discprice ="22.5">
                     <option value ="">Please Select</option>
                     <?php make_seat_num(); ?>
-                    <input type='hidden' id='FCP-price' name='FCP-price' value='27.00'>
-                    <input type='hidden' id='FCP-price-disc' name='FCP-price-disc' value='22.50'>
                   </select><br>
 
-                <label for ="qty-seats-FCC">Standard Children: </label>
-                  <select name ="qty-seats-FCC" id= "qty-seats-FCC">
+                <label for ="seats[FCC]">First Class Children: </label>
+                  <select name ="seats[FCC]" data-fullprice="24" data-discprice ="21">
                     <option value ="">Please Select</option>
                     <?php make_seat_num(); ?>
-                    <input type='hidden' id='FCC-price' name='FCC-price' value='24.00'>
-                    <input type='hidden' id='FCC-price-disc' name='FCC-price-disc' value='21.00'>
                   </select>
 
             </fieldset>
-                              <input type="submit" value="Submit">
+            <br>
+            <button name="bookNow" type="submit">Book Now</button>
                     
-      </div>
-    <?php
-      function make_seat_num(){
-        $i=1;
-        while($i < 11){
-                  echo"<option value=$i>$i</option>";
-                  $i++;
-      }
-    }
-      ?>
-    
+        </div>
+        <?php
+          function make_seat_num(){
+            $i=1;
+            while($i < 11){
+                      echo"<option value=$i>$i</option>";
+                      $i++;
+          }
+        }
+          ?>
+
+       
         </form>
 
       </div>
-    </div>
+    
 
   </main>
     

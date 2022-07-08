@@ -14,8 +14,7 @@
 
 
 
-.top_nav {
-   
+.top_nav {  
     height: 100px;
     position: -webkit-sticky;
     position: sticky;
@@ -23,7 +22,7 @@
     background-color: transparent;
     padding: 20px;
     text-align: center;
-    z-index: 999;
+    z-index: 20;
    
 }
 
@@ -44,7 +43,7 @@
 }
 
 .top_nav a:visited{
-    color:#e56db1
+    color:#e56db1;
 }
 
 .top_nav a:hover{
@@ -54,6 +53,37 @@
     box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
     transform: scale(1.2);
 }
+
+@media screen and (max-width: 1000px){
+    
+.top_nav{
+        padding:5px;
+      
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+.top_nav a{
+        font-size: 20px;
+        padding: 5px, 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+ 
+    }
+
+.top_nav a:focus{
+        color:#41b6e6;
+        text-emphasis: bold;
+        background-color: rgb(37, 37, 37);
+        box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+        transform: scale(1.1);
+    }
+
+   
+}
+
+
 
 body {
     animation: fadein 2s;
@@ -166,32 +196,32 @@ th{
     margin-right: auto;  
     border-collapse: collapse;    
     width: 550px;  
-    text-align: center;  
     font-size: 25px;  
     padding: 15px;
   
 }
 
 .seating .div{
-    width: 50%;
-    display: inline-block; 
-}
+    width: 80%;
+    }
 
 .seating_options{
-    vertical-align: top;
+
     display: inline-block;
     text-align: center;
-    width: 120px;
-    margin-bottom: 50px;
+    margin-bottom: 50px;	
+    
+		
 }
 .seating_options img {
     width: 300px;
     height: 300px;
     border-radius: 12px;
     background-color: grey;
-    
     margin-top: 50px;
 }
+
+
 .seating_options caption {
     display: block;
     
@@ -220,7 +250,6 @@ th{
 
 
 .movie_info{
-   
     background-color: transparent;
     width: 550px;
     height:475px;
@@ -335,6 +364,7 @@ th{
     font-size: 20px;
 }
 
+
 button[type="submit"]{ 
     display: table-cell;
     margin-right: 10px;
@@ -362,14 +392,98 @@ button[type="submit"]:hover{
 }
 
 
+@media screen and (max-width: 600px){
+    
+    
+    .now_showing  div {
+        width: 100%;
+        font-size: 12px important!;
+      }
+   
+    
+    .movie_info{
+        background-color: transparent;
+        width: 550px;
+        height:475px;
+        margin-bottom: 90px;
+        padding: 30px;
+        font-size: 12px !important;
+        
+      }
+    
+    
+       
+    .movie_info_front img{
+        
+        object-fit: cover;
+        max-width: 250px;
+        max-height: 250px;
+        width: auto;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 10%;
+        
+      }
+    
+    .movie_info h3 {
+        font-size:30px;
+      }
+      
+  
+    .movie_info_back{
+        padding:5px;   
+      }
+      /* decided to remove synopsis on back for mobile, too hard to properly resize */
+      .movie_info_back p{
+        font-size: 0px;
+      }
+        
+      .movie_info_back h4{
+        text-align: center;
+        font-size: 20px;
+      }
+    
+    .movie_info_back ul{
+        position: relative;
+        justify-content: center;
+        margin-left: 25%;
+        float: left;
+    }
+    .movie_info_back li{
+        margin: 5px;
+        font-size: 16px;
+       
+        
+    } 
+    .movie_info_back img{
+        object-fit: cover;
+        max-width: 200px;
+        max-height: 200px;
+        width: auto;
+        height: auto;
+        margin-left: 20%;
+        margin-top: 10%;
+      }
+
+
+      .seat_form button[type="submit"]{ 
+       
+        
+    }
+
+
+
+}
+
+
 .video_player{
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
 .video_player div{
-    width: 30%;
+    width: 40%;
     margin-left: 5%; 
    
 }
@@ -379,6 +493,40 @@ button[type="submit"]:hover{
     font-size: 30px;
     margin-top: auto;
 
+}
+
+@media screen and (max-width: 1700px){
+
+    .video_player{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .video_wrapper{
+        text-align: center;
+        justify-content: center;
+    }
+    
+   
+    .video_player div{
+        justify-content: center;
+        flex: 1 0 100%;
+        display: flex;
+        text-align: center;
+        width:60%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        overflow: hidden;
+        
+    }
+
+    .synopsis h4{
+        position: absolute;
+       justify-content: center;
+       text-align: center;
+        margin-bottom: 10px;  
+}
 }
 
 .booking_form_wrapper{
@@ -408,29 +556,69 @@ button[type="submit"]:hover{
 .radio_button{
   cursor: pointer;
   appearance: none;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: #e56db1;
   border: 3px solid;
   border-color: #585858;
   margin: 0;
- 
 
 
 }
 
+
+@media screen and (max-width: 1000px){
+
+    .video_player{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .video_wrapper{
+        text-align: center;
+        justify-content: center;
+    }
+    
+    
+    .video_player div{
+        justify-content: center;
+        flex: 1 0 100%;
+        max-width: 950px;
+    }
+    
+
+
+    .booking_form_wrapper{
+        display: flex;
+        flex-wrap:wrap ;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .booking_form_wrapper div{
+        justify-content: center;
+        flex: 1 0 100%;
+        margin-bottom: 5%;
+    }
+
+    .booking_form_wrapper fieldset{
+        border: none;
+        margin-bottom: 5%;
+    }
+
+    .booking_form_wrapper fieldset legend{
+        font-size: 30px ;
+       
+    }
+
+}
 
 .radio_button:checked{
     background-color: #41b6e6;
-    transform: scale(1.2);
-    
+    transform: scale(0.9); 
 }
 
-@media only screen and (max-width: 600px) {
-    
-}
     
 html{
     scroll-behavior: smooth;
 }
-

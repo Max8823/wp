@@ -27,7 +27,7 @@ Class Movie
         $this->viewing_days = $movie_data["viewing_days"];
         $this->movie_stars = $movie_data["main_cast"];
         $this->movie_director = $movie_data["movie_director"];
-}
+    }
 
     function get_movie_name(){
         return $this->movie_name;
