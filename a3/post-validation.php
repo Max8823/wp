@@ -20,7 +20,7 @@ foreach (json_decode($movie_data) as $movie){
     die;
 } else{
 
-// these 3 variables are used to check the movie code, time and day, if any one of these remain false then the booking is not valid and is likely caused by a dishonest user
+// these variables are used to check the movie code, time and day, if any one of these remain false then the booking is not valid and is likely caused by a dishonest user
 $movie_found = false;
 $day_found = false;
 $time_found = false;
@@ -112,12 +112,14 @@ $seat_found = false;
         $_SESSION['Name'] = $_POST['user']['Name'];
         $_SESSION['Email'] = $_POST['user']['Email'];
         $_SESSION['Phone'] = $_POST['user']['mobile_number'];
-        
-        
-      //  header("Location: ./Recipt_page.php");
+        $_SESSION['Price'] = $_POST['totalPrice'];
+  
     }
-
-
+  
+    if($movie_found && $time_found && $day_found && $seat_found){
+      Header('Location: ./Recipt.php');
+      die;
+    }
 
 ?>
 

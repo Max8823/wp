@@ -2,39 +2,42 @@ let dayTime = null;
 let fullprice = 0;
 let discountprice = 0;
 let total =0;
+
 const seating = [];
 let checkedName =null;
 let checkedEmail = null;
 let checkedPhone = null;
 
+window.Price =0;
 
 
 window.onload=function(){
    
     let error = document.getElementById("Target");
     if(error != null){
+
        validateForm();
+     
     }
+    
 
+    checkSeats(document.getElementById("seatForm"));
+    checkDayTime()
+    
 
-   //var radios = document.getElementsByName('day');
    
    if (document.querySelector('input[name="day"]')) {
     document.querySelectorAll('input[name="day"]').forEach((elem) => {
       elem.addEventListener("change", function(event) {
         dayTime = JSON.parse(event.target.value);
-        console.log("changed");
-    
+        
          day = dayTime.day;
          time = dayTime.time;
+     
          calculatePrice(dayTime, seating);
 
       });
     });
-
-    var seats2 = document.querySelector('select[name="seat"]');
-    console.log(seats2);
-    
 
     var email = document.getElementById("user[Email]");
     email.addEventListener('input', function() {
@@ -59,9 +62,6 @@ window.onload=function(){
 
     seats.addEventListener("change", function(event) {
      
-         fullPrice = event.target.getAttribute("data-fullprice");
-         discPrice = event.target.getAttribute("data-discprice");    
-
         var matchFound = false;
       
         if(seating.length != 0){
@@ -81,7 +81,7 @@ window.onload=function(){
             seating.push(event.target);
         }
 
-        ///console.log(seating);
+     
     calculatePrice(dayTime, seating);
          
     });
@@ -90,30 +90,59 @@ window.onload=function(){
 
     function checkSeats(seats){
         var formatted = false;
-        if(seats.length != 0){
+     
+        // this var is getting all the elemets - in this case, the drop down options where the user enters in the  number of seats they want
+        var input = seats.getElementsByTagName("select");
+
+        for(i=0; i<input.length; i++){
+        
+        if(input[i].value != 0){
            
-            formatted = true;
-            for(i=0; i< seats.length; i++){
-              
+            formatted = true;  
+            seating.push(input[i]);
+                
         }
-        console.log("seats"+formatted);
+    }
+  
         return formatted;
     }
-    }
-
-    function checkDayTime(dayTime){
-
+    
+    function checkDayTime(){
+        
+        validated = false;
+          
+        if (document.querySelector('input[name="day"]')) {
+            document.querySelectorAll('input[name="day"]').forEach((elem) => {
+        
+                if(elem.checked){
+                    
+                    dayTime = JSON.parse(elem.value);
+                    day = dayTime.day;
+                    time = dayTime.time;
+                    
+                    elem.checked = true;
+                    validated = true;
+                    console.log("day = " + day + " time = " + time);
+                            
+                }
+                              
+              });
+              
+            };
+            calculatePrice(dayTime, seating);
+            return validated;
     }
 
 
     function calculatePrice(dayTime_arr, seats){
-
+   
         if(dayTime_arr != null && seats.length != 0){
+
         let day = dayTime_arr.day;
         let time = dayTime_arr.time;
-        let price = 0;
-    
+        let price = null;
         
+      
        // monday price calculation, discounts are all day
        if(day == 'Monday'){
             for(i=0; i<seats.length; i++){
@@ -147,46 +176,70 @@ window.onload=function(){
          }
 
        }
-     
+            
             document.getElementById("price").innerHTML = '$'+price;
+            document.getElementsByName("totalPrice")[0].value = price;
+                      
         }
     }
+
+    
     
     function validateForm(){
+        
         var validated = true;
-        console.log("validating");
+    
         if(!checkName(document.getElementById("user[Name]").value)){
             validated = false;
             document.getElementById("nameError").innerHTML = "Your Name must be filled"; 
+
+        } else{
+
+            document.getElementById("nameError").innerHTML = "";
         }
 
          if(!checkEmail(email = document.getElementById("user[Email]").value)){
             validated = false;
             document.getElementById("emailError").innerHTML = "Your Email must be filled";
+
+        } else{
+
+            document.getElementById("emailError").innerHTML = "";
         }
 
         if(!checkPhone(document.getElementById("user[mobile_number]").value)){
             validated = false;
             document.getElementById("phoneError").innerHTML = "Your Phone Number must be filled";    
+
+        } else {
+            document.getElementById("phoneError").innerHTML = ""; 
         }
 
-        if(!checkSeats(document.getElementById("seatForm"))){
+        if(seating.length < 1){
             validated = false;
             document.getElementById("seatingError").innerHTML = "You must select at least one seat";
+
+        } else {
+            document.getElementById("seatingError").innerHTML = "";
         }
 
-        if(dayTime == null){
+        if(!checkDayTime() ){
             validated = false;
             document.getElementById("dayTimeError").innerHTML = "Please select one of the options below:";
+
+        } else {
+            document.getElementById("dayTimeError").innerHTML = "";
         }
 
 
         if(validated){
             document.querySelector("#seatForm").disabled = false;
         }
+
         else{
             document.querySelector("#seatForm").disabled = true;
         }
+
         return validated;
     }
 

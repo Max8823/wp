@@ -30,7 +30,7 @@
 .nav a{
    
     background-color: transparent;
-    border: 3px solid #ffc845;; 
+    border: 3px solid #ffc845; 
     background-color: black;
     border-radius: 30px;
     color: #ffc845;
@@ -642,6 +642,32 @@ button[type="submit"]:hover{
        
     }
 
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .tickets{
+        display: block;
+        justify-content: center;
+        margin-bottom: 30px;
+        width: 300px;
+        margin: auto;
+        border: 3px solid #ffc845; 
+        padding: 10px;
+    }
+
+
+}
+
+.tickets{
+    display: block;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 500px;
+    margin: auto;
+    border: 3px solid #ffc845; 
+    padding: 10px;
 }
 
 .radio_button:checked{

@@ -1,54 +1,11 @@
 <?php 
-session_start();
 
-include "Movies.php";
+include "tools.php";
 
-$movie_data = file_get_contents("movie_data.json");
-$movies = [];
-
-
-// storing the movies from the movie JSON into an array
-foreach (json_decode($movie_data) as $movie){
-  $movies[] = new Movie((array)$movie);
-}
-
-  if(!isset($_SESSION['movie_code'])){
-// this prevents an incorrect movie code from being submitted in the post from the index.php page
-  if(!isset($_GET['movie'])){
-    Header("Location: ./index.php?error=".'Movie not found');
-    die;
-} 
-
-
-else{
-
-// finding the current movie based off the movie_code that was passed in the post, comparing to existing movie_codes in the movies.JSON file
-  foreach($movies as $movie){
-    if($movie->get_movie_code() == $_GET['movie']){
-      $current_movie =$movie;
-      $_SESSION['movie_code'] = $current_movie->get_movie_code();
-    }
-  }
-  if($current_movie == null){
-    Header("Location: ./index.php?error=".'Movie not found');
-    die;
-  }
-}
-  } else{
-    
-    foreach($movies as $movie){
-      if($movie->get_movie_code() == $_SESSION['movie_code']){
-        $current_movie =$movie;
-      }
-  }
-}
+ $current_movie = check_movie_code();
 
 
   ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang='en'>
   <head>
@@ -66,11 +23,14 @@ else{
 <body>
 
   <!-- this is for error handling when the user may not select a viewing time or a nubmer of seats, this will cause the validateForm javascript function to be run
-again which will display the appropriate errors  -->
+again, this could be in tools however its not very big -->
 <?php if(isset($_GET['error'])){
-  ?> <script> validateForm()</script> <?php
+ 
+ echo '<div id=Target></div>';
 
-} ?>
+} 
+
+?>
   
   <header>
     <img src = "https://imgur.com/t6jo64l.png" alt= "Lunardo_logo" class="header_logo">
@@ -108,7 +68,7 @@ again which will display the appropriate errors  -->
 
       <hr>
       <h1> Enter your personal and booking details below: </h1>
-      <form action ="post-validation.php" onsubmit="return validateForm()" method = "post">
+      <form action = "post-validation.php"  onsubmit="return validateForm()" method = "post">
     
       <input type="hidden" name="movie" value=<?php echo $current_movie->get_movie_code() ?>>
 
@@ -124,12 +84,12 @@ again which will display the appropriate errors  -->
           <br>
 
           <label for="user[Email]">Email:</label><br>
-          <input type="text" id="user[Email]" name="user[Email]" value='<?php if(isset($_SESSION["Email"])){echo($_SESSION["Email"]);}?>'placeholder="example@gmail.com">
+          <input type="email" id="user[Email]" name="user[Email]" value='<?php if(isset($_SESSION["Email"])){echo($_SESSION["Email"]);}?>'placeholder="example@gmail.com">
           <span id = "emailError"></span>
           <br>
 
           <label for="user[mobile_number]">Mobile Number:</label><br>
-          <input type="text" id="user[mobile_number]" name="user[mobile_number]" value='<?php if(isset($_SESSION["Phone"])){echo($_SESSION["Phone"]);}?>'placeholder="0421 123 123"> 
+          <input type="tel" id="user[mobile_number]" name="user[mobile_number]" value='<?php if(isset($_SESSION["Phone"])){echo($_SESSION["Phone"]);}?>'placeholder="0421 123 123"> 
           <span id = "phoneError"></span>
           <br>
         </fieldset>
@@ -167,7 +127,7 @@ again which will display the appropriate errors  -->
 
         <div id="seatForm">
           <span id = "seatingError"></span>
-            <fieldset>
+            <fieldset id="seatFieldset">
               <legend>Standard Seating</legend>
       
                 <label for ="seats[STA]"> Standard Adults:</label>
@@ -212,15 +172,18 @@ again which will display the appropriate errors  -->
                   </select>
 
             </fieldset>
+          <div>
+
+            <h2> Final Price = <h2> 
+            <p id="price">$0</p>
+
+            <input type="hidden" name="totalPrice" value="" >
+         </div>
             <br>
             <button name="bookNow" type="submit">Book Now</button>
                     
         </div>
-        <div>
-          <h2> Final Price = <h2> 
-            <p id="price">$0</p>
-            <input type="hidden" name="price" value="call(document.getElementById('price').value">
-         </div>
+      
 
        
         </form>
