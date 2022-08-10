@@ -217,7 +217,7 @@ window.onload=function(){
 
         if(seating.length < 1){
             validated = false;
-            document.getElementById("seatingError").innerHTML = "You must select at least one seat";
+            document.getElementById("seatingError").innerHTML = "You must select at least one seat <br><br>";
 
         } else {
             document.getElementById("seatingError").innerHTML = "";
@@ -225,7 +225,7 @@ window.onload=function(){
 
         if(!checkDayTime() ){
             validated = false;
-            document.getElementById("dayTimeError").innerHTML = "Please select one of the options below:";
+            document.getElementById("dayTimeError").innerHTML = "Please select one of the options below: <br><br>";
 
         } else {
             document.getElementById("dayTimeError").innerHTML = "";

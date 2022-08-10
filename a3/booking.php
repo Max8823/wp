@@ -56,25 +56,28 @@ again, this could be in tools however its not very big -->
       </div>
       
       <div class = "synopsis">
-        <h4> Movie Synopsis </h4>
-        <p><br><br><?php echo $current_movie->get_movie_details()?></p>
-        <h4> Movie Director: </h4>
-        <br><br><p><?php echo $current_movie->get_movie_director()?></p>
-        <h4> Main Actors: </h4>
-        <br><br><p><?php echo $current_movie->get_movie_cast()?></p>
+
+        <h3> Movie Synopsis: </h3>
+        <p><br><?php echo $current_movie->get_movie_details()?></p>
+        <br><br>
+    
+        <h3> Movie Director: </h3>
+        <p><?php echo $current_movie->get_movie_director()?></p>
+        <br><br>
+
+        <h3> Main Actors: </h3>
+        <p><?php echo $current_movie->get_movie_cast()?></p>
       </div>
 
     </div>
 
-      <hr>
-      <h1> Enter your personal and booking details below: </h1>
-      <form action = "post-validation.php"  onsubmit="return validateForm()" method = "post">
-    
-      <input type="hidden" name="movie" value=<?php echo $current_movie->get_movie_code() ?>>
+    <hr>
+    <h1> Enter your personal and booking details below: </h1>
+    <form action = "post-validation.php"  onsubmit="return validateForm()" method = "post">
+    <input type="hidden" name="movie" value=<?php echo $current_movie->get_movie_code() ?>>
 
-      <div class = "booking_form_wrapper">
+    <div class = "booking_form_wrapper">
         
-
       <div class = "user_Information">
         <fieldset>
           <legend>User Information</legend>
@@ -172,65 +175,24 @@ again, this could be in tools however its not very big -->
                   </select>
 
             </fieldset>
-          <div>
-
-            <h2> Final Price = <h2> 
+           
+          <div class='Price'>
+            <h2> Final Price: <h2> 
             <p id="price">$0</p>
 
             <input type="hidden" name="totalPrice" value="" >
-         </div>
-            <br>
+        
             <button name="bookNow" type="submit">Book Now</button>
-                    
-        </div>
-      
-
+          </div>          
        
-        </form>
+        </div>
+      <div>
+      </form>
 
-      </div>
-    
-      <script> </script>
 
   </main>
     
   
-
-
-
-
-  <?php
-          function make_seat_num($type){
-            $i=1;
-            
-            if(isset($_SESSION["seats"]["$type"])){
-
-              while($i<11){
-                if($i == $_SESSION["seats"]["$type"]){
-                  echo "<option value='$i' selected>$i</option>";
-                }
-                else{
-                  echo "<option value='$i'>$i</option>";
-                 
-                }
-                $i++;
-              }
-          }
-
-            while($i < 11){
-              
-                      echo"<option value=$i>$i</option>";
-                      $i++;
-          }
-        }
-
-          ?>
-              
-
-
-
-
-   
     <footer>
       <br><br><br><br><br><br><br>
       <div>&copy;<script>

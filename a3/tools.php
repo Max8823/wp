@@ -71,6 +71,32 @@ foreach($movies as $movie){
   return $current_movie;
 }
 
+// used to generate seating numbers, from 0-10 moved ffrom booking.php
+function make_seat_num($type){
+  $i=1;
+  
+  if(isset($_SESSION["seats"]["$type"])){
+
+    while($i<11){
+      if($i == $_SESSION["seats"]["$type"]){
+        echo "<option value='$i' selected>$i</option>";
+      }
+      else{
+        echo "<option value='$i'>$i</option>";
+       
+      }
+      $i++;
+    }
+}
+
+  while($i < 11){
+    
+            echo"<option value=$i>$i</option>";
+            $i++;
+}
+}
+
+
 //used to return the full seating name oppopsed to the short hand version
  function get_ticket_name(string $seat_type){
 
@@ -132,7 +158,5 @@ function get_gst($price){
   return $gst;
 
 }
-
-
 
 ?>

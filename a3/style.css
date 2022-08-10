@@ -107,15 +107,33 @@ body {
 
 body h1{
     text-align: center;
-    font-size: 80px;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
 
-body p{
-    font-size: 22px;
+body h2, h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+body h4{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 
 
+body p{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body table{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
 
 
 body header{
@@ -492,12 +510,6 @@ button[type="submit"]:hover{
       }
 
 
-      .seat_form button[type="submit"]{ 
-       
-        
-    }
-
-
 
 }
 
@@ -521,38 +533,42 @@ button[type="submit"]:hover{
 
 }
 
+.synopsis{
+    text-align: center;
+
+    margin-top: auto;
+}
+
 @media screen and (max-width: 1700px){
 
-    .video_player{
-        display: flex;
-        flex-wrap: wrap;
-    }
+   
     
-    .video_wrapper{
-        text-align: center;
-        justify-content: center;
-    }
-    
+  
    
     .video_player div{
         justify-content: center;
         flex: 1 0 100%;
-        display: flex;
         text-align: center;
-        width:60%;
-        margin-left: auto;
-        margin-right: auto;
+        max-width:60%;
+        margin:auto;
         padding: 0;
-        overflow: hidden;
+       
         
     }
 
-    .synopsis h4{
-        position: absolute;
-       justify-content: center;
-       text-align: center;
-        margin-bottom: 10px;  
-}
+    .synopsis{
+        max-width: 60%;
+        display: inline-block;    
+    }
+
+
+    .synopsis p{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    
 }
 
 .booking_form_wrapper{
@@ -570,12 +586,13 @@ button[type="submit"]:hover{
 
 .booking_form_wrapper span{
     color: red;
+    font-size: 24px;
+    font-style: bold;
 }
 
 
 .booking_form_wrapper input{
-    margin-bottom: 20px;
-   
+    margin-bottom: 20px;  
 }
 
 .booking_form_time label{
@@ -592,10 +609,35 @@ button[type="submit"]:hover{
   border: 3px solid;
   border-color: #585858;
   margin: 0;
-
-
 }
 
+.radio_button:checked{
+    background-color: #41b6e6;
+    transform: scale(0.9); 
+}
+
+
+#seatForm{
+    text-align: center;
+}
+
+#Price{
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 1560px){
+
+    .booking_form_wrapper div{
+        font-size:20px ;
+        margin: 5%;
+    }
+
+}
 
 
 @media screen and (max-width: 1000px){
@@ -617,8 +659,6 @@ button[type="submit"]:hover{
         max-width: 950px;
     }
     
-
-
     .booking_form_wrapper{
         display: flex;
         flex-wrap:wrap ;
@@ -629,12 +669,12 @@ button[type="submit"]:hover{
     .booking_form_wrapper div{
         justify-content: center;
         flex: 1 0 100%;
-        margin-bottom: 5%;
+        margin-bottom: 10px;
     }
 
     .booking_form_wrapper fieldset{
         border: none;
-        margin-bottom: 5%;
+        margin-bottom: 10px;
     }
 
     .booking_form_wrapper fieldset legend{
@@ -644,36 +684,162 @@ button[type="submit"]:hover{
 
 }
 
+/* Recipt page */
+
+#recipt section{
+    width: 21cm;
+    max-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+  
+   
+}
+
+#recipt section table{
+    width: 90%;
+    margin: auto;
+}
+
+#recipt section table td{
+    padding: 1rem
+}
+
+#recipt section table, th, td {
+    border:1px solid #ffc845;
+}
+
+
+.tickets{
+    display: block;
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    border: 3px solid #ffc845; 
+    padding: 5px;
+    padding-left: 25px;
+    page-break-inside: avoid;
+}
 
 @media screen and (max-width: 1000px){
+
+    #recipt section{
+    width: auto;
+    max-height: 29.7cm;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+    
+
+    }
+    #recipt p{
+        font-size: 20px;
+    }
 
     .tickets{
         display: block;
         justify-content: center;
         margin-bottom: 30px;
-        width: 300px;
+        width: 400px;
+        font-size: 15px;
         margin: auto;
         border: 3px solid #ffc845; 
         padding: 10px;
     }
 
+    #recipt section table, tr, td{
+        width: 500px;  
+        font-size: 20px;  
+        padding: 10px;
+    }
 
 }
 
-.tickets{
-    display: block;
-    justify-content: center;
-    margin-bottom: 30px;
-    width: 500px;
-    margin: auto;
-    border: 3px solid #ffc845; 
-    padding: 10px;
+@media screen and (max-width: 730px){
+
+    #recipt section{
+    width: auto;
+    max-height: 29.7cm;
+    padding: 0.5cm;
+    margin: 0.5cm auto;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+    }
+
+    #recipt p{
+        font-size: 15px;
+    }
+
+    #recipt section table, tr, td{
+        width: 300px;  
+        font-size: 15px;  
+        padding: 5px;
+    }
+
+}
+/*  the following is for the print display - colors changed to reduce Ink needed*/
+
+@page {
+    size: auto;
+    margin: 0mm; 
+}
+@media print {
+
+    body{
+        padding: 0!important;
+        margin: 0!important;
+        color: black;
+    }
+    
+    #recipt{
+        margin-top: -150px;
+    }
+
+    #recipt section table, th, td {
+        
+        justify-content: center;
+        border:1px solid black;
+    }
+
+    #recipt section {
+        justify-content: center;
+        width: initial;
+        background: initial;
+        box-shadow: none;
+        border: none;
+        page-break-inside: avoid;
+        page-break-before: avoid;
+      
+    }
+
+  
+
+    .tickets{
+        border: 2px solid black;  
+    }
+
+    #footer{
+        display: none;
+    }
+
+    #debug{
+        display: none;
+    }
+
+
 }
 
-.radio_button:checked{
-    background-color: #41b6e6;
-    transform: scale(0.9); 
-}
+    
+
+    
+
+
 
     
 html{

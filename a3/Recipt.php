@@ -19,19 +19,16 @@ $quantity = get_quantity();
     <script src='../wireframe.js'></script>
 
     <body>
-
-      <main>
-
-        <h1>Booking Confirmation</h1>
-
+      <main id="recipt">
         <section>
-
-          <h2>Recipt</h2>
+        <h1>Booking Confirmation</h1>
           <h3>customer Information:</h3>
-
-          <p>Name: <?php echo($_SESSION['Name']); ?></p>
-          <p>Email: <?php echo($_SESSION['Email']); ?></p>
-          <p>Phone: <?php echo($_SESSION['Phone']); ?></p>
+          
+          <p>Customer Name: &nbsp; <?php echo($_SESSION['Name']); ?></p>
+          <p>Customer Email: &nbsp; <?php echo($_SESSION['Email']); ?></p>
+          <p>Customer Phone: &nbsp; <?php echo($_SESSION['Phone']); ?></p>
+          <p>Booking time: &nbsp; <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?></p>
+          <br>
 
           <h3>Booking Information:</h3>
 
@@ -58,68 +55,73 @@ $quantity = get_quantity();
                 }
                     echo("<tr>");
                     // this likely isn't nessaary but I prefer a kind of off-set with the pricing at the end of the Table
-                    for($i=0; $i<4; $i++){
+                    for($i=0; $i<5; $i++){
                       echo("<td></td>");
                     }
                     echo("</tr>");
                     echo("<tr>");
-                    
                     echo("<td>Total cost: $".$_SESSION['Price']."</td>");
-                    
                     echo("<td>"."Gst.(incl): $".get_gst($_SESSION['Price'])."</td>");
-                    
+                
               ?>
-            </tr>
+            
           </table>
         </section>
-
-
-            <h1> Tickets </h1>
+        <section>
+            <h3>Tickets</h3>
               
+            <?php
 
-              <?php
-              $num =1;
+              $num =0;
+              $tickNum = 1;
+             
               foreach($seats as $seat => $value){
-
+                
                 if($value != null){
+                // this if statement break the page allowing for 3 tickets per page which seems like the most resonable amount of tickets to show on a page without being
+                // too much or too little
+                  
+
                   for( $i=0; $i<$value; $i++){
-                    
+                    if($num%3==0 && $num !=0){
+                     
+                      echo("</section>");
+                      echo("<section>");
+                      echo("<h3>Tickets</h3>");
+                    }
                     ?>
                     
                     <div class="tickets">
                     
-                    <h3> Customer Name: <?php echo($_SESSION['Name']); ?></h3>
-                    <h3> Movie: <?php echo($current_movie->get_movie_name()); ?></h3>
-                    <h3> Day: <?php echo($_SESSION['day']); ?> </h3>
-                    <h3> Time: <?php echo(get_view_time($_SESSION['time'])); ?> </h3>
-                    <h3> Seat type: <?php echo(get_ticket_name($seat)); ?> </h3>
-                    <h3> Ticket: <?php echo($num. "of ". $quantity); ?> </h3>
-                    <br><br>
-                      </div>
-                      <br>
+                      <p> Customer Name: &nbsp; &nbsp;  <?php echo($_SESSION['Name']); ?> </p>
+                      <p> Movie: &nbsp; &nbsp;  <?php echo($current_movie->get_movie_name()); ?> </p>
+                      <p> Showing Time: &nbsp; &nbsp;  <?php echo($_SESSION['day'])." ".get_view_time($_SESSION['time']); ?> </p>
+                      <p> Seat type: &nbsp; &nbsp;  <?php echo(get_ticket_name($seat)); ?> </p>
+                      <p> Ticket: &nbsp; &nbsp;  <?php echo($tickNum . " of  ". $quantity); ?> </p>
+                    
+                    </div>
+                    <br>
                     <?php
+                   
                      $num++;
-                } 
+                     $tickNum++;
+                  } 
                 }
-              
-              }
-              
-              
-              ?>
+              } 
+            ?>
+            </section>
+        </main>
 
 
 
-    <table>
+      <!--- This needs to have an ID tag or I can't edit the css for some reason --->
+      <footer id="footer">
+        <p>Lunardo Cinemas</p>
+        <p>42 wallaby way Pakenham</p>
+        <p>Phone: (03) 123 4567</p>
+      </footer>
 
-
-  </section>
-  </main>
-
-
-
-
-
-</body>
+    </body>
 
 <aside id="debug">
       <hr>

@@ -1,6 +1,10 @@
+<!-- starting and destroying session variables here, this is due to error handling with the post validation and to prevent the user from getting 'stuck' if a false movie code is
+somehow submitted -->
 <?php
+
 session_start();
 session_destroy();
+
 ?>
 
 <!DOCTYPE html>
@@ -17,9 +21,6 @@ session_destroy();
     <script src='../wireframe.js'></script>
     
   </head>
-
-
-  
 
   <body>
     <header>
@@ -246,7 +247,7 @@ session_destroy();
           <div class='movie_info'>
             <div class='movie_info_inner'>
               <div class='movie_info_front'>
-                <img src='https://m.media-amazon.com/images/M/MV5BODdlNDdjOWUtNDYwNy00ZWViLWI2MjItZTMwZTVhOTk3ZjMxXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_FMjpg_UX1080_.jpg' alt='Mrs Harris Goes to Parris'>
+                <img src='https://m.media-amazon.com/images/M/MV5BY2UyOWJjMWEtNmIwYS00ZjM5LWEyYjMtMTI4NDBhMzViNmIyXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg' alt='Mrs Harris Goes to Parris'>
                 <h3>Mrs Harris Goes to Paris</h3>
                 <h4>Rating : PG</h4>
               </div>
@@ -254,7 +255,7 @@ session_destroy();
               <div class = 'movie_info_back'>
                 <h3>Mrs Harris Goes to Paris</h3>
                 <p> A widowed cleaning lady in 1950s London falls madly in love with a couture Dior dress, and decides that she must have one of her own.</p>
-                <img src='https://m.media-amazon.com/images/M/MV5BODdlNDdjOWUtNDYwNy00ZWViLWI2MjItZTMwZTVhOTk3ZjMxXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_FMjpg_UX1080_.jpg' alt='Mrs Harris Goes to Parris'>
+                <img src='https://m.media-amazon.com/images/M/MV5BY2UyOWJjMWEtNmIwYS00ZjM5LWEyYjMtMTI4NDBhMzViNmIyXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg' alt='Mrs Harris Goes to Parris'>
                 
                 <h4>Showing Times:</h4>
                 <ul>
