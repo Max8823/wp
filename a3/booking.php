@@ -33,10 +33,8 @@ again, this could be in tools however its not very big -->
 ?>
   
   <header>
-    <img src = "https://imgur.com/t6jo64l.png" alt= "Lunardo_logo" class="header_logo">
-      <h1>Lunardo Cinemas<h1>
-      
-
+    <img src = "https://i.imgur.com/xAnMjzk.png" alt= "Lunardo_logo" class="header_logo">
+     
   </header>
 
   <div class ='nav'>

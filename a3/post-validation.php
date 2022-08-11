@@ -6,6 +6,7 @@ session_start();
 
 include "Movies.php";
 
+
 $movie_data = file_get_contents("movie_data.json");
 $movies = [];
 
@@ -37,8 +38,8 @@ $seat_found = false;
   }
     if(!$movie_found){
         
-        //Header("Location: ./index.php?error=".'Movie not found');
-        //die;
+        Header("Location: ./index.php?error=".'Movie not found');
+        die;
     }
         
       
@@ -66,6 +67,7 @@ $seat_found = false;
 
 
     // checking if the current movie has a time that matches the time that was passed in the post
+
     for($i=0; $i<count($viewing_times); $i++){
         if($viewing_times[$i] == intval($time[1])){
             $time_found = true;
@@ -117,6 +119,7 @@ $seat_found = false;
     }
   
     if($movie_found && $time_found && $day_found && $seat_found){
+      
       Header('Location: ./Recipt.php');
       die;
     }

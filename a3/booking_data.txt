@@ -1,0 +1,5 @@
+Order_date          Name            Mobile          Email           Movie_Code          Day         Time            STA         STP         STC         FCA         FCP         FCC         Total           GST
+2022 August 10 		Maxwell			0436381058		max@gmail.com		AHF			Monday			1800			2																		30			3
+2022 August 10 		max			0439381048		max@gmail.com		AHF			Saturday			2100			4			2			3												167.5			16.75
+2022 August 10 		max			0439381048		max@gmail.com		RMC			Wednesday			1200						5															90			9
+2022 August 10 		max			0439381048		max@gmail.com		RMC			Wednesday			1200						5															90			9

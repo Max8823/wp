@@ -146,15 +146,13 @@ body header{
 }
 
 body header img{
-    width: 150px;
-    height: 150px;
-    border-radius: 8px;   
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+     
 }
 
-body header h1{
-    top:20px;
-    margin-left: 200px;
-}
+
 
 body hr{
     width: 90%;
@@ -189,6 +187,26 @@ body hr{
 .about h1{
     font-size: 40px;
     text-align: center;
+}
+
+#about img{
+    max-width: fit-content;
+    max-height: fit-content;
+    justify-content: left;
+    float: left;
+}
+
+#about p{
+    overflow:hidden;
+}
+
+
+@media screen and (max-width: 1200px){
+    
+    #about img{
+        width: 50%;
+        height: 50%;
+    }
 }
 
    
@@ -580,7 +598,7 @@ button[type="submit"]:hover{
 
 .booking_form_wrapper div {
     margin-left: 10%;
-    font-size: 24px;
+    font-size: 30px;
     padding: 5px;
 }
 

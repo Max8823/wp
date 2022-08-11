@@ -159,4 +159,50 @@ function get_gst($price){
 
 }
 
+
+function print_to_booking(){
+
+  $file = fopen("booking_data.txt", "a") or die;
+  $txt = "\n";
+  fwrite($file, $txt);
+  
+  $txt = date ("Y F d ", filemtime($_SERVER['SCRIPT_FILENAME'])) . "\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['Name'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['Phone'] . "\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['Email'] . "\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['movie_code'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['day'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['time'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['STA'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['STP'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['STC'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['FCA'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['FCP'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['seats']['FCC'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = $_SESSION['Price'] . "\t\t\t";
+  fwrite($file, $txt);
+  $txt = get_gst($_SESSION['Price']);
+  
+
+  fwrite($file, $txt);
+  fclose($file);
+  
+
+
+
+}
+
 ?>

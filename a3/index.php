@@ -24,8 +24,7 @@ session_destroy();
 
   <body>
     <header>
-    <img src = "https://imgur.com/t6jo64l.png" alt= "Lunardo_logo" class="header_logo">
-      <h1>Lunardo Cinemas<h1>
+    <img src = "https://i.imgur.com/xAnMjzk.png" alt= "Lunardo_logo" class="header_logo">
     </header>
 
     <div class ='nav'>
@@ -66,7 +65,7 @@ session_destroy();
     
         <section id="about">
         <h1>About us</h1>
-
+          <img src ="https://i.imgur.com/kJ9zNsJ.jpg">
             <p> Lunardo Cinemas is local theatre located inbetween Townsville and Cairns FNQ, oringinally opening its doors to customers in 1982 Lunardo Cinemas has over 40 years
               Experience in the theatre industry. After a long renovating period and due to the covid pandemic Lunardo Cinemas is once again opening its doors to customers, with a 
             grand reopening occuring on the 4th of August 2022 </p> 
