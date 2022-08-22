@@ -1,7 +1,7 @@
 <?php 
 
 include "tools.php";
-//print_to_booking();
+print_to_booking();
 // setting local variables used in the functions below
 $seats = $_SESSION['seats'];
 $current_movie = get_movie_code();

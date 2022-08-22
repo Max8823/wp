@@ -3,3 +3,40 @@ Order_date          Name            Mobile          Email           Movie_Code  
 2022 August 10 		max			0439381048		max@gmail.com		AHF			Saturday			2100			4			2			3												167.5			16.75
 2022 August 10 		max			0439381048		max@gmail.com		RMC			Wednesday			1200						5															90			9
 2022 August 10 		max			0439381048		max@gmail.com		RMC			Wednesday			1200						5															90			9
+2022 August 10 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 10 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 10 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3			5									256			25.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6
+2022 August 13 		max			0439381048		max@gmail.com		ACT			Wednesday			2100			1			2			3												106			10.6

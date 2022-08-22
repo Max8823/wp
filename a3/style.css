@@ -805,13 +805,14 @@ button[type="submit"]:hover{
 
 @page {
     size: auto;
-    margin: 0mm; 
+    margin:5mm;
 }
 @media print {
 
+    html,body{
+        height: 99%;
+    }
     body{
-        padding: 0!important;
-        margin: 0!important;
         color: black;
     }
     
@@ -833,13 +834,14 @@ button[type="submit"]:hover{
         border: none;
         page-break-inside: avoid;
         page-break-before: avoid;
+        page-break-after: avoid;
       
     }
 
-  
-
     .tickets{
         border: 2px solid black;  
+        page-break-after: avoid;
+        
     }
 
     #footer{
