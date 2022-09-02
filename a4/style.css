@@ -1,0 +1,904 @@
+
+/* this is a basic fade-in effect, this is mostly used because my monitor is really bad and i kind of need it to get opacity to 1 properly */
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+.nav {  
+    height: 100px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    z-index: 20;
+    background-color: grey;
+   
+}
+
+.nav a{
+   
+    background-color: transparent;
+    border: 3px solid #ffc845; 
+    background-color: black;
+    border-radius: 30px;
+    color: #ffc845;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+
+
+.nav a:hover{
+    color:#41b6e6;
+    text-emphasis: bold;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    transform: scale(1.2);
+}
+
+.nav a:focus{
+    color:#41b6e6;
+        text-emphasis: bold;
+        background-color: rgb(37, 37, 37);
+        box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+        transform: scale(1.1);
+}
+
+.nav a.current{
+    color:#13e22e;
+    background-color: #585858;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 1000px){
+    
+.nav{
+        padding:5px;
+      
+        justify-content: center;
+        text-align: center;
+        
+    }
+
+.nav a{
+        font-size: 20px;
+        padding: 5px, 10px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+ 
+    }
+
+.nav a:focus{
+        color:#41b6e6;
+        text-emphasis: bold;
+        background-color: rgb(37, 37, 37);
+        box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+        transform: scale(1.1);
+    }
+
+   
+}
+
+
+body {
+    animation: fadein 2s;
+    background-color: black;
+    font-style: italic;
+    color:#ffc845;
+    
+}
+
+body h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+body h2, h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+body h4{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+
+body p{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+body table{
+    font-size: 22px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+
+body header{
+    
+    text-align: center;
+    color:#ffc845;
+    justify-content: center;
+    display: flex;
+    
+}
+
+body header img{
+    justify-content: center;
+    width: 650px;
+    height: 450px;
+     
+}
+
+
+
+body hr{
+    width: 90%;
+    background-color: #ffc845;
+    border-color: #ffc845;
+    border-radius: 8px;
+    height: 3px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+#section{
+    display: -webkit-flex;
+    display: flex;
+}
+
+
+
+
+#about{
+    background: black;
+    padding: 20px;
+    text-align: center;
+    display: inline-block;
+    left: 0px;
+    margin: 0 10%;
+    width: 80%;
+    min-height: 100%;
+}
+
+.about h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+#about img{
+    max-width: fit-content;
+    max-height: fit-content;
+    justify-content: left;
+    float: left;
+}
+
+#about p{
+    overflow:hidden;
+}
+
+
+@media screen and (max-width: 1200px){
+    
+    #about img{
+        width: 50%;
+        height: 50%;
+    }
+}
+
+   
+#seating{
+
+    background: black;
+    padding: 20px;
+    text-align: center;
+    color: #ffc845;
+    display: inline-block;
+    left: 0px;
+    margin: 0 10%;
+    width: 80%;
+  
+  
+}
+.seating h1{
+    font-size: 40px;
+    text-align:center;
+}
+
+th{
+    font-size: 30px;
+    text-align: center; 
+    border: 1px solid #ffc845;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+.seating table, tr, td{
+
+    text-align: center;
+    border: 1px solid #ffc845;  
+    margin-left: auto;  
+    margin-right: auto;  
+    border-collapse: collapse;    
+    width: 550px;  
+    font-size: 25px;  
+    padding: 15px;
+  
+}
+
+.seating .div{
+    width: 80%;
+    }
+
+.seating_options{
+
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 50px;	
+    
+		
+}
+.seating_options img {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    background-color: grey;
+    margin-top: 50px;
+}
+
+
+.seating_options caption {
+    display: block;
+    
+}
+
+
+
+#now_showing{
+    background: black;
+    text-align: center;
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color:#ffc845;
+    justify-content: space-between;
+    
+    
+}
+
+
+
+.now_showing  div {
+    width: 50%;
+    display: inline-block;  
+  }
+
+
+.movie_info{
+    background-color: transparent;
+    width: 550px;
+    height:475px;
+    margin-bottom: 90px;
+    padding: 30px;
+    
+    
+  }
+
+   
+.movie_info img{
+    max-width: 300px;
+    max-height: 400px;
+    margin: 15px;
+    float: left;
+    vertical-align: middle;
+  }
+
+.movie_info h3 {
+    font-size:30px;
+  }
+
+
+.movie_info_inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.movie_info:hover .movie_info_inner {
+  transform: rotateY(180deg);
+}
+
+.movie_info_front, .movie_info_back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+
+.movie_info_front{
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    font-size: 20px;
+    padding:5px;
+    border: solid 2px;
+    border-color: #ffc845;
+    text-align: left;
+    border-radius: 12px;
+ 
+  }
+  
+.movie_info_back{
+    
+    width: inherit;
+    height: inherit;
+    background-color: black;
+    font-size: 20px;
+    padding:5px;
+    border: solid 2px;
+    border-radius: 12px;
+    border-color: #ffc845;
+    display: table;
+    text-align: center; 
+    transform: rotateY(180deg); 
+  }
+
+  /* box-shadow provides "glow" effect around edges */
+.movie_info_back:hover{
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+}
+  
+.movie_info_back img{
+    max-width: 250px;
+    max-height: 250px;
+     
+}
+.movie_info_back p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.movie_info_back h3{
+    margin-top: -5px;
+    text-align: center;
+  }
+
+  .movie_info_back h4{
+    text-align: right;
+    font-size: 28px;
+  }
+
+.movie_info_back ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    float:right;
+    display: table-cell;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+    
+.movie_info_back li{
+    text-align: center;
+    margin: 5px;
+    font-size: 20px;
+}
+
+
+button[type="submit"]{ 
+    display: table-cell;
+    margin-right: 10px;
+    justify-content: center;
+    vertical-align: bottom;
+    background-color: black; 
+    border:solid 3px;
+    border-color: #ffc845;
+    border-radius: 12px;
+    color: #ffc845;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* box-shadow provides "glow" effect around edges , other css makes button look slightly bigger and bold text */
+button[type="submit"]:hover{
+    cursor: pointer;
+    color: #fcd780;
+    transform: scale(1.2);
+    text-emphasis: bold;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+}
+
+
+@media screen and (max-width: 600px){
+    
+    
+    .now_showing  div {
+        width: 100%;
+        font-size: 12px important!;
+      }
+   
+    
+    .movie_info{
+        background-color: transparent;
+        width: 550px;
+        height:475px;
+        margin-bottom: 90px;
+        padding: 30px;
+        font-size: 12px !important;
+        
+      }
+
+      .movie_info:focus .movie_info_inner {
+        transform: rotateY(180deg);
+      }
+      
+      .movie_info_front, .movie_info_back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden; 
+          backface-visibility: hidden;
+      }
+    
+    
+       
+    .movie_info_front img{
+        
+        object-fit: cover;
+        max-width: 250px;
+        max-height: 250px;
+        width: auto;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 10%;
+        
+      }
+    
+    .movie_info h3 {
+        font-size:30px;
+      }
+      
+  
+    .movie_info_back{
+        padding:5px;   
+      }
+      /* decided to remove synopsis on back for mobile, too hard to properly resize */
+      .movie_info_back p{
+        font-size: 0px;
+      }
+        
+      .movie_info_back h4{
+        text-align: center;
+        font-size: 20px;
+      }
+    
+    .movie_info_back ul{
+        position: relative;
+        justify-content: center;
+        margin-left: 25%;
+        float: left;
+    }
+    .movie_info_back li{
+        margin: 5px;
+        font-size: 16px;
+       
+        
+    } 
+    .movie_info_back img{
+        object-fit: cover;
+        max-width: 200px;
+        max-height: 200px;
+        width: auto;
+        height: auto;
+        margin-left: 20%;
+        margin-top: 10%;
+      }
+
+
+
+}
+
+
+.video_player{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.video_player div{
+    width: 40%;
+    margin-left: 5%; 
+   
+}
+
+.video_player h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: auto;
+
+}
+
+.synopsis{
+    text-align: center;
+
+    margin-top: auto;
+}
+
+@media screen and (max-width: 1700px){
+
+   
+    
+  
+   
+    .video_player div{
+        justify-content: center;
+        flex: 1 0 100%;
+        text-align: center;
+        max-width:60%;
+        margin:auto;
+        padding: 0;
+       
+        
+    }
+
+    .synopsis{
+        max-width: 60%;
+        display: inline-block;    
+    }
+
+
+    .synopsis p{
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+.booking_form_wrapper{
+    display: flex;
+    justify-content: center;
+    border: 2px, solid;
+    border-color: #ffc845;
+}
+
+.booking_form_wrapper div {
+    margin-left: 10%;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.booking_form_wrapper span{
+    color: red;
+    font-size: 24px;
+    font-style: bold;
+}
+
+
+.booking_form_wrapper input{
+    margin-bottom: 20px;  
+}
+
+.booking_form_time label{
+    vertical-align: top;
+    margin-left: 15px;
+}
+
+.radio_button{
+  cursor: pointer;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  background-color: #e56db1;
+  border: 3px solid;
+  border-color: #585858;
+  margin: 0;
+}
+
+.radio_button:checked{
+    background-color: #41b6e6;
+    transform: scale(0.9); 
+}
+
+
+#seatForm{
+    text-align: center;
+}
+
+#Price{
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+}
+
+
+
+@media screen and (max-width: 1560px){
+
+    .booking_form_wrapper div{
+        font-size:20px ;
+        margin: 5%;
+    }
+
+}
+
+
+@media screen and (max-width: 1000px){
+
+    .video_player{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .video_wrapper{
+        text-align: center;
+        justify-content: center;
+    }
+    
+    
+    .video_player div{
+        justify-content: center;
+        flex: 1 0 100%;
+        max-width: 950px;
+    }
+    
+    .booking_form_wrapper{
+        display: flex;
+        flex-wrap:wrap ;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .booking_form_wrapper div{
+        justify-content: center;
+        flex: 1 0 100%;
+        margin-bottom: 10px;
+    }
+
+    .booking_form_wrapper fieldset{
+        border: none;
+        margin-bottom: 10px;
+    }
+
+    .booking_form_wrapper fieldset legend{
+        font-size: 30px ;
+       
+    }
+
+}
+
+/* Recipt page */
+
+#recipt section{
+    width: 21cm;
+    max-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+  
+   
+}
+
+#recipt section table{
+    width: 90%;
+    margin: auto;
+}
+
+#recipt section table td{
+    padding: 1rem
+}
+
+#recipt section table, th, td {
+    border:1px solid #ffc845;
+}
+
+
+.tickets{
+    display: block;
+    text-align: left;
+    width: 500px;
+    margin: auto;
+    border: 3px solid #ffc845; 
+    padding: 5px;
+    padding-left: 25px;
+    page-break-inside: avoid;
+}
+
+@media screen and (max-width: 1000px){
+
+    #recipt section{
+    width: auto;
+    max-height: 29.7cm;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+    
+
+    }
+    #recipt p{
+        font-size: 20px;
+    }
+
+    .tickets{
+        display: block;
+        justify-content: center;
+        margin-bottom: 30px;
+        width: 400px;
+        font-size: 15px;
+        margin: auto;
+        border: 3px solid #ffc845; 
+        padding: 10px;
+    }
+
+    #recipt section table, tr, td{
+        width: 500px;  
+        font-size: 20px;  
+        padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 730px){
+
+    #recipt section{
+    width: auto;
+    max-height: 29.7cm;
+    padding: 0.5cm;
+    margin: 0.5cm auto;
+    background-color: black;
+    border: 2px solid #ffc845;
+    box-shadow: 0 5px 15px rgba(252, 215, 128, 0.4);
+    page-break-inside: avoid;
+    }
+
+    #recipt p{
+        font-size: 15px;
+    }
+
+    #recipt section table, tr, td{
+        width: 300px;  
+        font-size: 15px;  
+        padding: 5px;
+    }
+
+}
+/*  the following is for the print display - colors changed to reduce Ink needed*/
+
+@page {
+    size: auto;
+    margin:5mm;
+}
+@media print {
+
+    html,body{
+        height: 99%;
+    }
+    body{
+        color: black;
+    }
+    
+    #recipt{
+        margin-top: -150px;
+    }
+
+    #recipt section table, th, td {
+        
+        justify-content: center;
+        border:1px solid black;
+    }
+
+    #recipt section {
+        justify-content: center;
+        width: initial;
+        background: initial;
+        box-shadow: none;
+        border: none;
+        page-break-inside: avoid;
+        page-break-before: avoid;
+        page-break-after: avoid;
+      
+    }
+
+    .tickets{
+        border: 2px solid black;  
+        page-break-after: avoid;
+        
+    }
+
+    #footer{
+        display: none;
+    }
+
+    #debug{
+        display: none;
+    }
+
+
+}
+
+
+[type="checkbox"]:not(:checked) {
+    display: none;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    outline: 0;
+    cursor: pointer;
+
+}   
+
+
+ #rememberMe   {
+ border: 2px solid #ffc845;
+ text-align: center;
+
+
+}
+
+
+
+
+
+
+.currentBookings div{
+    margin-bottom: 100px;
+}
+
+#search_booking fieldset{
+    margin-left: 50px;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    width: 350px;
+    
+}
+
+
+    
+
+    
+
+
+
+    
+html{
+    scroll-behavior: smooth;
+}

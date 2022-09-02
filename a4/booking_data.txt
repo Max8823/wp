@@ -1,0 +1,5 @@
+Order_date,          Name,            Mobile,          Email,           Movie_Code,          Day,         Time,            STA,         STP,         STC,         FCA,         FCP,         FCC,         Total,           GST
+2022 August 13, 		sam,			0439381048,  		max@gmail.com,   		AHF,			Monday,			1800,			1,			2,			3,			0,			0,			0,			78,			7.8
+2022 August 13, 		max,			0439381048,  		max@gmail.com,   		AHF,			Monday,			1800,			2,			0,			0,			0,			0,			0,			30,			3
+2022 August 13, 		sam,			0439381048,  		max@gmail.com,   		RMC,			Monday,			1800,			1,			0,			0,			0,			0,			0,			78,			7.8
+2022 September 02 ,			max,			0439381048,			max@gmail.com,			ACT,			Monday,			2100,			2,			0,			0,			0,			0,			0,			30,			3,
