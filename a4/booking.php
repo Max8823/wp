@@ -2,6 +2,7 @@
 
 include "tools.php";
 
+
  $current_movie = check_movie_code();
  
   ?>
@@ -176,8 +177,10 @@ again, this could be in tools however its not very big -->
             </fieldset>
 
             <!-- Added for assignment 4 -->
+            <br>
+            <input type="checkbox" id="remember"onclick="Remember()">
               <div id="rememberMe">
-                <input type="checkbox" id="remember"onclick="Remember()">
+                
                 <label id="remember_lab" for="remember">Remember me</label>
               </div>
           <div class='Price'>
@@ -199,21 +202,24 @@ again, this could be in tools however its not very big -->
   
     <footer>
       <br><br><br>
-      <div class = "search_booking">
-        <fieldset>
-          <legend>User Information</legend>
-          <label for ="user[Name]"> Name </label><br>
+      <div id="search_booking">
+      <form action = "currentbookings.php" method = "post">
+        <fieldset id="search_field">
+          <legend>Search for previous bookings</legend>
+          <br>
+          <label for ="user[Name]"> Name: </label><br>
           <input type="text" id="user[Name]" name="user[Name]" placeholder="John doe">
           <span id = "nameError"></span>
-          <br>
+          <br><br>
 
           <label for="user[Email]">Email:</label><br>
           <input type="email" id="user[Email]" name="user[Email]" placeholder="example@gmail.com">
           <span id = "emailError"></span>
-          <br>
-          <button name="bookNow" type="submit" onclick = >Book Now</button>
-        
+          <br><br><br>
+          <button name="bookNow" type="submit" >Search for bookings</button>
+            
         </fieldset>
+      </form>
       </div>
       
       

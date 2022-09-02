@@ -1,0 +1,120 @@
+[
+    {
+      "movie_name": "Top Gun Maverick",
+      "movie_img": "https://m.media-amazon.com/images/M/MV5BMmIwZDMyYWUtNTU0ZS00ODJhLTg2ZmEtMTk5ZmYzODcxODYxXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UY576_.jpg",
+      "movie_rating": "M",
+      "movie_details": "After more than 30 years of service as one of the Navy's top aviators, Pete 'Maverick Mitchell' is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him. Training a detachment of graduates for a special assignment, Maverick must confront the ghosts of his past and his deepest fears, culminating in a mission that demands the ultimate sacrifice from those who choose to fly it.",
+      "movie_code": "ACT",
+      "trailer_link": "https://www.youtube.com/embed/giXco2jaZ_4",
+      "movie_director": "Joseph Kosinski",
+      "main_cast": [
+        "Tom Cruise",
+        "Kelly McGillis",
+        "Val Kilmer"
+      ],
+      "viewing_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "viewing_times": [
+        "2100",
+        "2100",
+        "2100",
+        "2100",
+        "2100",
+        "1800",
+        "1800"
+      ]
+    },
+    {
+      "movie_name": "Samrat Prithviraj",
+      "movie_img": "https://m.media-amazon.com/images/M/MV5BNzlkZjI3ZDctNTEzMy00MjUxLWI5YjQtYjg0ODNjNzdjZjg0XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_FMjpg_UX300_.jpg",
+      "movie_rating": "M",
+      "movie_details": "Samrat Prithviraj opens in a gladiator-like setting in Ghazi, Afghanistan where a frail, blinded Samrat Prithviraj (Akshay Kumar) is seen exhibiting his valour as he locks horns with ferocious lions. A crowd of spectators along with Sultan Mohammad Ghori (Manav Vij) hold their breath and watch this display of raw masculinity and bravura.The period drama then hits the rewind button and takes us through some chapters from Samrat Prithviraj's life. Right from the First Battle Of Tarrain where he had his adversary Mohammad Ghori at his feet to how this 'last Hindu king' had to face defeat and then, ultimately death owing to a betrayal.",
+      "movie_code": "AHF",
+      "trailer_link": "https://www.youtube.com/embed/33-CQdPHyjw",
+      "movie_director": "Chandraprakash Dwivedi",
+      "main_cast": [
+        "Akshay Kumar",
+        "Manushi Chhilar",
+        "Sanjay Dutt"
+      ],
+      "viewing_days": [
+        "Monday",
+        "Tuesday",
+        "Saturday",
+        "Sunday"
+      ],
+      "viewing_times": [
+        "1800",
+        "1800",
+        "2100",
+        "2100"
+      ]
+    },
+    {
+      "movie_name": "Lightyear",
+      "movie_img": "https://m.media-amazon.com/images/M/MV5BYTg2Zjk0ZTctM2ZmMi00MDRmLWJjOGYtNWM0YjBmZTBjMjRkXkEyXkFqcGdeQXVyMTM1MTE1NDMx._V1_FMjpg_UY720_.jpg",
+      "movie_rating": "PG-13",
+      "movie_details": "Legendary space ranger Buzz Lightyear embarks on an intergalactic adventure alongside ambitious recruits Izzy, Mo, Darby, and his robot companion, Sox. As this motley crew tackles their toughest mission yet, they must learn to work together as a team to escape the evil Zurg and his dutiful robot army that are never far behind.",
+      "movie_code": "FAM",
+      "trailer_link": "https://www.youtube.com/embed/BwZs3H_UN3k",
+      "movie_director": "Angus MacLane",
+      "main_cast": [
+        "Chris Evans",
+        "Keke Palmer",
+        "Peter Sohn"
+      ],
+      "viewing_days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "viewing_times": [
+        "1200",
+        "1200",
+        "1800",
+        "1800",
+        "1800",
+        "1200",
+        "1200"
+      ]
+    },
+    {
+      "movie_name": "Mrs Harris Goes to Paris",
+      "movie_img": "https://m.media-amazon.com/images/M/MV5BY2UyOWJjMWEtNmIwYS00ZjM5LWEyYjMtMTI4NDBhMzViNmIyXkEyXkFqcGdeQXVyMDA4NzMyOA@@._V1_.jpg",
+      "movie_rating": "PG -13",
+      "movie_details": "In 1950s London, a widowed cleaning lady falls madly in love with a couture Dior dress, deciding she must have one of her own. After working to raise the funds to pursue her dream, she embarks on an adventure to Paris that will change not only her own outlook -- but the very future of the House of Dior.",
+      "movie_code": "RMC",
+      "trailer_link": "https://www.youtube.com/embed/iO9JcPbbmAA",
+      "movie_director": "Anthony Fabian",
+      "main_cast": [
+        "Jason Isaacs",
+        "Lesley Manville",
+        "Rose Williams"
+      ],
+      "viewing_days": [
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "viewing_times": [
+        "1200",
+        "1200",
+        "1200",
+        "1500",
+        "1500"
+      ]
+    }
+  ]

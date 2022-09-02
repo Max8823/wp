@@ -305,7 +305,10 @@ function Remember(){
 
         console.log(localStorage.getItem("email"));
         
+    // statement will trigger if the user elects "forget me"
     } else{
+
+        // removing the variables from local storage, setting the box to unchecked and changing the text to "remember me"
         document.getElementById("remember_lab").innerHTML = "Remember me";
         localStorage.removeItem("email");
         localStorage.removeItem("name");
