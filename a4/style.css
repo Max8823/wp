@@ -856,6 +856,7 @@ button[type="submit"]:hover{
 }
 
 
+
 [type="checkbox"]:not(:checked) {
     display: none;
     vertical-align: middle;
@@ -880,6 +881,15 @@ button[type="submit"]:hover{
 
 .currentBookings div{
     margin-bottom: 100px;
+}
+
+.currentBookings table{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+    width: 60%;
+    border: 1px solid #ffc845;
+    border-collapse: collapse;
 }
 
 #search_booking fieldset{

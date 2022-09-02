@@ -5,7 +5,7 @@ $user_name = $_POST['user']['Name'];
 $user_email = $_POST['user']['Email'];
 
 $bookings = loadfile();
-$foundBookings = search_bookings($bookings, $user_name );
+$foundBookings = search_bookings($bookings, $user_name, $user_email );
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,11 @@ $foundBookings = search_bookings($bookings, $user_name );
             <?php if($foundBookings !== 0){ ?>
 
             <table>
+                
                 <tr>
+                  <td align="center"colspan = 4> <h2> Previous bookings for <?php echo $user_name; ?> </h2> </td>
+                 </tr>
+                
                     <th>Movie</th>
                     <th>Day</th>
                     <th>Booking Time</th>

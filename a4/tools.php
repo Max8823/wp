@@ -312,25 +312,34 @@ function getBtn(array $booking){
 
 
 // search_bookings used as a seperate function to find if there are any previous bookings made by the user in the bookings_data.txt file
-function search_bookings($bookings, $user_name){
+function search_bookings($bookings, $user_name, $email){
     $found = false;
 
     $i = 0;
     $j=0;
    
+    
+
+
     // looping through the bookings array
    for($i = 0; $i < count($bookings); $i++){
     
     // checking if the user name matches the name in the bookings array, adding the matches to foundBookings array and then returning the array
     $bookings[$i][1] = trim($bookings[$i][1]);
+    $bookings[$i][3] = trim($bookings[$i][3]);
 
-        if($bookings[$i][1] == $user_name){
+
+
+
+
+        if($bookings[$i][1] == $user_name && $bookings[$i][3] == $email){
             $found = true;
             $foundBookings[$j] = $bookings[$i];
             $j++;
 
         }
     }
+
     return $foundBookings;
 }
 
