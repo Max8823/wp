@@ -19,6 +19,12 @@ $foundBookings = search_bookings($bookings, $user_name, $user_email );
     <script src='../wireframe.js'></script>
     </head>
     <body class = "currentBookings">
+
+    <div class ='nav'>
+    <a href="index.php#about">About us </a>
+    <a href =index.php#seating> Seating </a> 
+    <a href =index.php#now_showing> Now Showing </a>
+  </div>
         <main>
             <div id = "prevBookings">
             <h1> Previous bookings </h1>
